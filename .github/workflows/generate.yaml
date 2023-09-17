@@ -2,9 +2,9 @@
 name: generate-dictionaries
 
 # 触发条件：每天 UTC 时间 0 时，即北京时间 8 时
-on:
-  schedule:
-    - cron: '0 0 * * *'
+#on:
+#  schedule:
+#    - cron: '0 0 * * *'
 
 jobs:
   generate:
