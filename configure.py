@@ -1,7 +1,6 @@
 # 此文件存储配置性质的全局变量。
 
-# repository 变量指定被抓取的数据所在的 Git 仓库
-repository = "https://github.com/EhTagTranslation/Database"
+# 要定义数据所在的 Git 仓库，请前往 clone.sh 设置
 
 # directory 变量指定 markdown 文件所在的目录，项目将读取该目录所有 markdown 文件
 directory = "database"

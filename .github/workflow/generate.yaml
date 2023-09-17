@@ -1,0 +1,23 @@
+# 此 Github Action 自动运行 Python 脚本、生成词典并发布 release。
+name: generate-dictionaries
+
+# 触发条件：每天 UTC 时间 0 时，即北京时间 8 时
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      # 配置 Python 环境
+      - uses: actions/checkout@v4.0.0
+      - name: setup-python
+        uses: actions/setup-python@v4.7.0
+        with:
+          python-version: '3.11'
+      - name: clone-repository
+        run: ./clone.sh
+        shell: bash
+      - name: run-python
+        run: python ./main.py
