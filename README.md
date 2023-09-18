@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-18 今天准备研究 db.text.json 和 db.ast.json 有没有大的区别。抓取数据部分输出的内容将采用类似 db.ast.json 的 JSON 代码树。另外可以准备着手阅读各大词典格式了。
+
 + 9-17 从文档得知需要 db.ast.json 和 db.text.json 两个文件，其中 db.ast.json 用于生成有图词典，db.text.json 用于生成无图词典。接下来研究 db.ast.json 所使用的 JSON 语法树。
 
 + 9-17 OpportunityLiu 君提醒我 github release 有解析好的 JSON 格式的文件，这样只需要从 github 抓取最新的 release 就好，不需要克隆整个仓库了，此外亦不须手动用正则表达式之流，不需要数据清洗。这两天在看发布的 JSON 数据结构。
