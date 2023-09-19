@@ -16,8 +16,5 @@ jobs:
         uses: actions/setup-python@v4.7.0
         with:
           python-version: '3.11'
-      - name: clone-repository
-        run: ./clone.sh
-        shell: bash
-      - name: run-python
+      - name: run-python-codes
         run: python ./main.py
