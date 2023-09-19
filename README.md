@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-19 实现了用 Rest API 获取数据的部分（fetch.py），但是 db.text.json 和 db.ast.json 有没有大的区别，才准备读。
+
 + 9-19 目前打算利用 Rest API 获取 EhDatabase 的最新 release，此部分将用 Python 实现，就不使用 Shell 代码了。正在阅读 Rest API 文档。
 
 + 9-18 今天准备研究 db.text.json 和 db.ast.json 有没有大的区别。抓取数据部分输出的内容将采用类似 db.ast.json 的 JSON 代码树。另外可以准备着手阅读各大词典格式了。
