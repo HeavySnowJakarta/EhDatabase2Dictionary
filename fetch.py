@@ -3,6 +3,10 @@
 import json
 import requests
 
+# 首先讲一下 noimage 变量的意义。本项目创立初期我（Heavysnowjakarta）曾尝试设计
+# 根据需求输出有图和无图词典的功能，后因我认为此功能作用不大而放弃。与之相关的已经
+# 设计好的部分将会保留以供有需要时复用。
+
 # 此函数利用 Rest API 基于所提供的仓库获取数据源实际地址
 def getdataurl(repository, noimage):
     url = "https://api.github.com/repos/" + repository + "/releases/latest"

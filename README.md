@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-19 目前我认为有图词典实用价值非常小，不再设计输出有图词典的功能。目前 noimage 变量等已经设计好的部分将会保留以供有需要时使用。
+
 + 9-19 实现了用 Rest API 获取数据的部分（fetch.py），但是 db.text.json 和 db.ast.json 有没有大的区别，才准备读。
 
 + 9-19 目前打算利用 Rest API 获取 EhDatabase 的最新 release，此部分将用 Python 实现，就不使用 Shell 代码了。正在阅读 Rest API 文档。

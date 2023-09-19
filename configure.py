@@ -12,8 +12,5 @@ output_name = "EhTagTranslation"
 # dictionary 变量指定输出的词典类型，all 代表输出全部词典
 dictionary = "all"
 
-# noimage 变量指定是否使图片输出到词典，True 代表不输出图片
-noimage = False
-
 # nodescription 变量指定是否使输出的词典不包含词条描述，若指定为 True，则最终词典只包含英文词条的中文翻译
 nodescription = False
