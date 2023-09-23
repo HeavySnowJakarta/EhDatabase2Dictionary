@@ -83,3 +83,4 @@ DIFFERENT:  unusual pupils
 - [ ] mac dictionary_dictionary
 - [ ] kindle dictionary_mobi
 - [ ] dictd database (maybe also public server?)_dictd index
+- [ ] epwing
