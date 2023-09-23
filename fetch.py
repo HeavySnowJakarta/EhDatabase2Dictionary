@@ -8,7 +8,7 @@ import requests
 # 设计好的部分将会保留以供有需要时复用。
 
 # 此函数利用 Rest API 基于所提供的仓库获取数据源实际地址
-def getdataurl(repository, noimage):
+def getDataUrl(repository, noimage):
     url = "https://api.github.com/repos/" + repository + "/releases/latest"
     stringresult = requests.get(url).text
     jsonresult = json.loads(stringresult)
@@ -22,8 +22,20 @@ def getdataurl(repository, noimage):
                 return i["browser_download_url"]
 
 # 此函数为 fetch.py 的主体，从数据源实际地址解析 JSON 格式的数据并返回 Python 字典            
-def getjsondata(repository, noimage):
-    url = getdataurl(repository, noimage)
+def getJsonData(repository, noimage):
+    # 从 URL 获取 JSON 格式的字典
+    url = getDataUrl(repository, noimage)
     stringresult = requests.get(url).text
     jsonresult = json.loads(stringresult)
-    # TODO: 根据 db.ast.json 返回字典
+    # 上述代码返回的字典是有层级结构的，我们接下来去除这些层级结构
+    result = {}
+    for category in jsonresult["data"]:
+        for enname in category["data"].keys():
+            result[enname] = category["data"][enname]
+    # 当 female 与 male 标签的词条同时存在时，取 female 标签的词条。为了确保这一点，我们在这里牺牲一些效率把这些相同的词条再一次换为 female 的
+    # 接下来的四行代码虽然能实现业务，但是很烂，求大佬提供更好的实现方式
+    for category in jsonresult["data"]:
+        if category["namespace"] == "female":
+            for enname in category["data"].keys():
+                result[enname] = category["data"][enname]
+    return result

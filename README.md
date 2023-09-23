@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-23 完成了获取 Python 字典格式的数据的部分，接下来基于这一部分生成词典。
+
 + 9-23 用脚本测试了一下 male 与 female 标签之间的差异。某版本数据库中这两个标签共存在 61 处差异，现摘录部分如下：
 
 ```
