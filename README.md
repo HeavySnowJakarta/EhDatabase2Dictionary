@@ -10,6 +10,52 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-23 用脚本测试了一下 male 与 female 标签之间的差异。某版本数据库中这两个标签共存在 61 处差异，现摘录部分如下：
+
+```
+DIFFERENT:  fairy
+    M   NAME:  仙子🧚‍♂️
+        INTRO:  有翅膀的人或其他生物，往往体型很小。
+        LINKS:
+    F   NAME:  仙女🧚‍♀️
+        INTRO:  有翅膀的人或其他生物，往往体型很小。
+        LINKS:
+
+DIFFERENT:  dinosaur
+    M   NAME:  恐龙🦖
+        INTRO:  任何恐龙进化枝的动物。
+        LINKS:
+    F   NAME:  恐龙🦕
+        INTRO:  任何恐龙进化枝的动物。
+        LINKS:
+
+DIFFERENT:  magical girl
+    M   NAME:  魔法少女
+        INTRO:  一种服装，包括裙子和褶边制服。需要异性装(crossdressing)标签。
+        LINKS:
+    F   NAME:  魔法少女
+        INTRO:  一种服装，包括裙子和褶边制服。
+        LINKS:
+
+DIFFERENT:  growth
+    M   NAME:  巨大化
+        INTRO:  变高，有可能成为巨人(giant)
+        LINKS:
+    F   NAME:  巨大化
+        INTRO:  变高，有可能成为女巨人(giantess)。
+        LINKS:
+
+DIFFERENT:  unusual pupils
+    M   NAME:  异瞳
+        INTRO:  瞳孔是或包含奇怪的形状，如心形、星形。除非是意想不到的形状，否则不应该用于动物/怪物(monster)的眼睛。
+        LINKS:
+    F   NAME:  异瞳
+        INTRO:  瞳孔是或包含奇怪的形状，如心形、星形。除非是意想不到的形状，否则不应该用于动物/恶魔的眼睛。
+        LINKS:
+```
+
+绝大多数词条是完全重合的。鉴于本词典的性质，针对 f 与 m 标签英文词条重合而中文词条不重合的部分，我认为只保留 f 词条而不保留 m 词条较为合适。
+
 + 9-19 目前我认为有图词典实用价值非常小，不再设计输出有图词典的功能。目前 noimage 变量等已经设计好的部分将会保留以供有需要时使用。
 
 + 9-19 实现了用 Rest API 获取数据的部分（fetch.py），但是 db.text.json 和 db.ast.json 有没有大的区别，才准备读。
