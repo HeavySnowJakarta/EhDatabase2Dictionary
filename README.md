@@ -19,6 +19,7 @@ This project is only in Chinese and i18n would be a super long shot.
 我的想法是最好使用开源实现，这样生成的词典或许是不完美的，或许对不同的软件兼容性不好，但是开源实现能极好地解决上述几个问题。
 
 参考资料：
+
     + [writemdict.py](https://github.com/zhansliu/writemdict)
     + [一些讨论](https://forum.freemdict.com/t/topic/774)
 
