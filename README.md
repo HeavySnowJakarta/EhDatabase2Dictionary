@@ -20,8 +20,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 参考资料：
 
-    + [writemdict.py](https://github.com/zhansliu/writemdict)
-    + [一些讨论](https://forum.freemdict.com/t/topic/774)
+1. [writemdict.py](https://github.com/zhansliu/writemdict)
+2. [一些讨论](https://forum.freemdict.com/t/topic/774)
 
 + 9-23 完成了获取 Python 字典格式的数据的部分，接下来基于这一部分生成词典。
 
