@@ -10,6 +10,18 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-23 阅读了 MDict txt 格式的初步制作方法。mdx 格式词典的生成要用到 MdxBuilder，这是仅使用于 Windows 下的 GUI 闭源软件，如果要用 MdxBuilder，我必须考虑：
+
+    + 要不要把 Github Actions 容器换成 Windows 虚拟机？
+    + 要不要想办法自动化操作 GUI 程序？
+    + 要不要在开源项目里引入闭源代码？
+
+我的想法是最好使用开源实现，这样生成的词典或许是不完美的，或许对不同的软件兼容性不好，但是开源实现能极好地解决上述几个问题。
+
+参考资料：
+    + [](https://github.com/zhansliu/writemdict)
+    + [](https://forum.freemdict.com/t/topic/774)
+
 + 9-23 完成了获取 Python 字典格式的数据的部分，接下来基于这一部分生成词典。
 
 + 9-23 用脚本测试了一下 male 与 female 标签之间的差异。某版本数据库中这两个标签共存在 61 处差异，现摘录部分如下：
