@@ -26,4 +26,4 @@ def getjsondata(repository, noimage):
     url = getdataurl(repository, noimage)
     stringresult = requests.get(url).text
     jsonresult = json.loads(stringresult)
-    # TODO: 根据 db.ast.json 和 db.text.json 的不同返回不同结构的字典
+    # TODO: 根据 db.ast.json 返回字典
