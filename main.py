@@ -2,4 +2,5 @@
 
 version = 0
 
-from . import *
+import configure
+import fetch

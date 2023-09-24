@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-24 利用 writemdict 模块实现了写入 mdx 的函数（mdict.py）。珍爱生命，拒绝造轮子！
+
 + 9-23 阅读了 MDict txt 格式的初步制作方法。mdx 格式词典的生成要用到 MdxBuilder，这是仅使用于 Windows 下的 GUI 闭源软件，如果要用 MdxBuilder，我必须考虑：
 
     + 要不要把 Github Actions 容器换成 Windows 虚拟机？
