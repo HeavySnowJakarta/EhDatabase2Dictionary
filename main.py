@@ -4,3 +4,5 @@ version = 0
 
 import configure
 import fetch
+
+from mdict import writeMdxFile

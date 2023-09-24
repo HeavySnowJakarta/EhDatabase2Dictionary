@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-24 Lingoes（ld2）文件格式没有官方制作工具，搜索了一圈也没有看到太多开源实现。鉴于是种格式的热度，暂时不会在其上面投入太多精力。
+
 + 9-24 利用 writemdict 模块实现了写入 mdx 的函数（mdict.py）。珍爱生命，拒绝造轮子！
 
 + 9-23 阅读了 MDict txt 格式的初步制作方法。mdx 格式词典的生成要用到 MdxBuilder，这是仅使用于 Windows 下的 GUI 闭源软件，如果要用 MdxBuilder，我必须考虑：
@@ -90,11 +92,12 @@ DIFFERENT:  unusual pupils
 + 9-14 目前计划使用 Python 脚本实现。EhDatabase 使用 markdown 存储数据，可能使用正则表达式匹配数据并将其转换为 Python 字典列表。需要从特定目录抓取所有 markdown 文件整合为同一个列表并按字母顺序排序。目前的难点有两个，一个是部分标签使用过分冗长的词组，实际查询时用到的意义不大；另一个是 male 和 female 这两个 markdown 文件包含的标签高度重合。E 站的策略是在这高度重合的标签前加入“m:”或“f:”标记，但是我怀疑某些词典全字匹配的策略对此十分不利。
 
 ## TODO
-- [ ] mdict_mdx mdd
-- [ ] lingoes_ld2
+- [x] mdict_mdx mdd
+<del>- [ ] lingoes_ld2 ldx</del>
 - [ ] babylon_bgl
 - [ ] stardict_dict dict.dz idx
 - [ ] abbyy lingvo_dsl->lsd lud
+- [ ] eudic
 - [ ] mac dictionary_dictionary
 - [ ] kindle dictionary_mobi
 - [ ] dictd database (maybe also public server?)_dictd index
