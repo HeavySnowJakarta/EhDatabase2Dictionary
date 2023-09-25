@@ -21,8 +21,8 @@ def generateSourceDictionary(dictionary, nodescription):
     return result
 
 # 此函数调用 writemdict 库并向传来的文件对象写入数据，其中 dictionary 参数由
-# fetch.py 的函数生成，file 为被写入的文件对象，必须拥有写
-# 入权限且必须以二进制格式打开
+# fetch.py 的函数生成，file 为被写入的文件对象，必须拥有写入权限且必须以二进制
+# 格式打开
 def writeMdxFile(title, description, dictionary, nodescription, outfile):
     source_dictionary = generateSourceDictionary(dictionary, nodescription)
     writer = MDictWriter(source_dictionary, title=title, description=description)

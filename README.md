@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-25 封装了生成 mdx 文件的函数，按理说现在已经可以用了。接下来开始测试。
+
 + 9-24 Lingoes（ld2）文件格式没有官方制作工具，搜索了一圈也没有看到太多开源实现。鉴于是种格式的热度，暂时不会在其上面投入太多精力。
 
 + 9-24 利用 writemdict 模块实现了写入 mdx 的函数（mdict.py）。珍爱生命，拒绝造轮子！
@@ -95,7 +97,7 @@ DIFFERENT:  unusual pupils
 - [x] mdict_mdx mdd
 <del>- [ ] lingoes_ld2 ldx</del>
 - [ ] babylon_bgl
-- [ ] stardict_dict dict.dz idx
+- [ ] stardict_dict dict.dz idx idx.gz ifo
 - [ ] abbyy lingvo_dsl->lsd lud
 - [ ] eudic
 - [ ] mac dictionary_dictionary

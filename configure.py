@@ -7,6 +7,12 @@ repository = "EhTagTranslation/Database"
 # output_name 变量指定输出词典的文件名前缀。最终输出的词典将以“前缀_后缀”的格式命名，其中前缀在这里指定，而后缀将为词典的格式
 output_name = "EhTagTranslation"
 
+# title 变量指定词典名称。
+title = "EhTagTranslation"
+
+# description 变量为词典的描述
+description = "EhTagTranslation 项目的翻译数据。"
+
 # dictionary 变量指定输出的词典类型，all 代表输出全部词典
 dictionary = "all"
 
