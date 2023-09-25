@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 9-25 引入了新的 mdict-utils 库。研读了该库的部分源码。尝试重新实现 mdict 词典的生成。
+
 + 9-25 writemdict 几年没维护了。其使用的 `cgi` 库已经过时。尝试寻找其他实现。
 
 + 9-25 封装了生成 mdx 文件的函数，按理说现在已经可以用了。接下来开始测试。
