@@ -9,13 +9,13 @@ This project is only in Chinese and i18n would be a super long shot.
 
 目前已经实现 MDict 格式词典的生成，目前计划支持 Babylon、星际译王、Lingvo、欧陆、Mac、Kindle、dictd 和 epwing 格式的词典，如您希望支持更多格式，欢迎提出 issue。
 
-要获知当前分支的最新消息，参见 [CHANGELOG.md](doc/CHANGELOG.md)。要获取目前尚不稳定的开发中代码，请尝试切换至 dev 分支。要获知本项目计划支持的词典格式，参见 [TODO.md](doc/TODO.md)。
+要获知当前分支的最新消息，参见 [CHANGELOG.md](doc/CHANGELOG.md)。要获取目前尚不稳定的开发中代码，请尝试切换至其他分支。要获知本项目计划支持的词典格式，参见 [TODO.md](doc/TODO.md)。
 
 开发指南？[main.py](main.py) 这个文件本身恰巧就是本项目开发指南的序言！
 
 ## 如何使用本仓库
 
-### 直接下载现成的词典（正在开发）
+### 直接下载现成的词典
 
 本仓库应用 GitHub Action 技术每天发布 GitHub Release，您可直接前往 GitHub Releases 页面下载所需格式的词典。本项目词典的命名采用 `EhTagTranslation_词典格式` 的格式，例如要下载 MDict 格式的文件，只需下载 `EhTagTranslation_MDict.mdx` 即可。
 
@@ -32,6 +32,7 @@ pip3 install requests tqdm
 ```
 git clone https://github.com/HeavySnowJakarta/EhDatabase2Dictionary.git
 cd EhDatabase2Dictionary
+git submodule update --init --recursive
 python3 main.py
 ```
 
