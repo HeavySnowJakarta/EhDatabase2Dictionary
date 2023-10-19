@@ -19,7 +19,8 @@ def generateSourceDictionary(name, dictionary, nodescription=0):
             if dictionary[enname]["links"]=="":
                 f.write(enname+"\n"+"<b>"+dictionary[enname]["name"]+"</b>"+"\n"+dictionary[enname]["intro"]+"\n</>\n")
             else:
-                f.write(enname+"\n"+"<b>"+dictionary[enname]["name"]+"</b>"+"\n"+dictionary[enname]["intro"]+"\n"+dictionary[enname]["links"]+"\n</>\n")
+                f.write(enname+"\n"+"<b>"+dictionary[enname]["name"]+"</b>"+"\n"+dictionary[enname]["intro"]+"\n</>\n")
+                # f.write(enname+"\n"+"<b>"+dictionary[enname]["name"]+"</b>"+"\n"+dictionary[enname]["intro"]+"\n"+dictionary[enname]["links"]+"\n</>\n")
     f.close()
 
 # 此函数调用 mdict_utils 库并根据指定的 txt 文件路径写入词典。title、
