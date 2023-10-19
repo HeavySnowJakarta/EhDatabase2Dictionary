@@ -10,6 +10,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 10-19 接下来的工作：重新撰写文档，将本章节移入 changelog，然后撰写 GitHub Action，准备发布 v1.0 版本，此后 main 分支将稳定化，不稳定提交移入新的 dev 分支。然后向上游数据库发布此成果。
+
 + 10-19 测试工作舒服地很。Python 真舒服呐！接下来准备 v1.0 版本的发布。目前由于上游数据发布问题，链接的嵌入存在问题，无法以超链接格式嵌入。
 
 + 10-19 需要 tqdm 库。在此记录。
