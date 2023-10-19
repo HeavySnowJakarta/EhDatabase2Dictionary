@@ -14,7 +14,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      # 配置 Python 环境，安装 python 库
+      # 配置 Python 环境，安装 python 库，检出子模块
       - uses: actions/checkout@v4.0.0
       - name: setup-python
         uses: actions/setup-python@v4.7.0
@@ -26,6 +26,9 @@ jobs:
           packages: |
             requests
             tqdm
+      - name: checkout-submodules
+        shell: bash
+        run: git submodule update --init --recursive
       # 运行 Python 代码
       - name: run-python-codes
         shell: bash
