@@ -1,6 +1,3 @@
-[submodule "lib/writemdict"]
-	path = lib/writemdict
-	url = https://github.com/zhansliu/writemdict.git
 [submodule "lib/mdict-utils"]
 	path = lib/mdict_utils
 	url = https://github.com/liuyug/mdict-utils
