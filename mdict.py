@@ -1,29 +1,35 @@
-# 此文件调用 writemdict 库产生 MDict 格式的文件
-# writemdict 库是 MdxBuilder 的一个开源实现，并不包含 mdx 的全部技术细节，也
-# 不能生成新版 mdx 词典，不过这不重要。
+# 此文件调用 mdict_utils 库来生成 mdict 格式的词典
 
-from lib.writemdict.writemdict import MDictWriter
+# 我们需要用到 mdict_utils 库中的 writer.py 中的 pack() 方法和
+# pack_mdx_txt() 方法
+from lib.mdict_utils.mdict_utils.base import writer
+# from lib.writemdict.writemdict import MDictWriter
 
-# 我们的 mdict 词典将采用的词条格式为：英文名<br>中文名<br>描述
-# 这些词条将以 Python 字典的格式传递给 writemdict 库
-# 此函数的 dictionary 由 fetch.py 的函数生成
-def generateSourceDictionary(dictionary, nodescription):
-    result = {}
-    if (nodescription):
-        for entry in dictionary.keys():
-            result[entry] = dictionary[entry]["name"]
+# generateSourceDictionary() 函数生成制作 MDict 词典所需的 txt 格式的文本
+# 文件，该文件将保存为 `output/<configure.py 定义的 name>_mdict.txt`。
+# name 和 nodescription 参数当由 configure.py 定义，dictionary 参数由 
+# fetch.py 下的 getDictionaryData() 函数生成
+def generateSourceDictionary(name, dictionary, nodescription=0):
+    f = open("temp/"+name+"_mdict.txt", "w")
+    if nodescription:
+        for enname in dictionary.keys():
+            f.write(enname+"\n"+dictionary[enname]["name"]+"\n</>\n")
     else:
-        for entry in dictionary.keys():
-            if (dictionary[entry]["links"]==""):
-                result[entry] = dictionary[entry]["name"] + "<br>" + dictionary[entry]["intro"]
+        for enname in dictionary.keys():
+            if dictionary[enname]["links"]=="":
+                f.write(enname+"\n"+dictionary[enname]["name"]+"\n"+dictionary[enname]["intro"]+"\n</>\n")
             else:
-                result[entry] = dictionary[entry]["name"] + "<br>" + dictionary[entry]["intro"] + "<br>" + dictionary[entry]["links"]
-    return result
+                f.write(enname+"\n"+dictionary[enname]["name"]+"\n"+dictionary[enname]["intro"]+"\n"+dictionary[enname]["links"]+"\n</>\n")
+    f.close()
 
-# 此函数调用 writemdict 库并向传来的文件对象写入数据，其中 dictionary 参数由
-# fetch.py 的函数生成，file 为被写入的文件对象，必须拥有写入权限且必须以二进制
-# 格式打开
-def writeMdxFile(title, description, dictionary, nodescription, outfile):
-    source_dictionary = generateSourceDictionary(dictionary, nodescription)
-    writer = MDictWriter(source_dictionary, title=title, description=description)
-    writer.write(outfile)
+# 此函数调用 mdict_utils 库并根据指定的 txt 文件路径写入词典。title、
+# description、nodescription 参数当由 confugure.py 定义，dictionary 参
+# 数由 fetch.py 下的 getDictionaryData() 函数生成
+# TODO: 继续完成对 mdict_utils 库下两个函数的调用
+def writeMdxFile(title, dictionary, description="", nodescription=0):
+    # 首先生成 pack_mdx_txt() 函数所需要的 txt 中间文件
+    generateSourceDictionary(name=title, dictionary=dictionary, nodescription=nodescription)
+    # 调用 writer.pack_mdx_txt() 函数解析前面生成的 txt 文件生成 Python 词典数据
+    dic = writer.pack_mdx_txt(source="temp/"+title+"_mdict.txt")
+    # 调用 writer.pack() 函数生成最终 mdx 文件
+    writer.pack(target="output/"+title+"_MDict.mdx", dictionary=dic, title=title, description=description)

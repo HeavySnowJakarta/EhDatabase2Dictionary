@@ -1,5 +1,5 @@
 # 此文件存储配置性质的全局变量。
-# 警告：不要注释下述任何变量。本项目其他部分没有针对它们设置默认值。
+# 警告：不要注释下述任何变量。本项目其他部分有可能没有针对它们设置默认值。
 
 # 本项目使用 GitHub Rest API 获取最新数据，因此数据源需为 GitHub 仓库。repository 变量指定所使用的 GitHub 仓库，格式为“所有者/仓库名”。
 repository = "EhTagTranslation/Database"

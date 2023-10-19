@@ -10,6 +10,10 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 10-19 在先前的工作上完成了基于 mdict-utils 库的 mdx 词典生成工作。开始测试。
+
++ 10-17 理清了子模块的提交问题，同时因为我之前把 `.gitsubmodules` 改坏了，`git commit` 不能正常工作，同时我对 `mdict.py` 的改动全部丢失。
+
 + 10-7 非常不幸的是，我尝试将对仓库子模块的改动提交到自己的仓库里去，结果出于变故，我对这些子模块所作的改动（笔记为主）全部丢失。最后一次提交以来的变动也全部丢失。要想实现对这些子模块的改动，我必须把它们悉数 fork 一遍。
 
 + 9-25 引入了新的 mdict-utils 库。研读了该库的部分源码。尝试重新实现 mdict 词典的生成。
@@ -22,7 +26,7 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 9-24 利用 writemdict 模块实现了写入 mdx 的函数（mdict.py）。珍爱生命，拒绝造轮子！
 
-+ 9-23 阅读了 MDict txt 格式的初步制作方法。mdx 格式词典的生成要用到 MdxBuilder，这是仅使用于 Windows 下的 GUI 闭源软件，如果要用 MdxBuilder，我必须考虑：
++ 9-23 阅读了 MDict txt 格式的初步制作方法。mdx 格式词典的生成要用到 MdxBuilder，这是仅适用于 Windows 下的 GUI 闭源软件，如果要用 MdxBuilder，我必须考虑：
 
     + 要不要把 Github Actions 容器换成 Windows 虚拟机？
     + 要不要想办法自动化操作 GUI 程序？
