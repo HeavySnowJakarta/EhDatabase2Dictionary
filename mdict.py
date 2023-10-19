@@ -2,7 +2,7 @@
 
 # 我们需要用到 mdict_utils 库中的 writer.py 中的 pack() 方法和
 # pack_mdx_txt() 方法
-from lib.mdict_utils.mdict_utils.base import writer
+from lib.mdict_utils.mdict_utils import writer
 # from lib.writemdict.writemdict import MDictWriter
 
 # generateSourceDictionary() 函数生成制作 MDict 词典所需的 txt 格式的文本
@@ -10,16 +10,16 @@ from lib.mdict_utils.mdict_utils.base import writer
 # name 和 nodescription 参数当由 configure.py 定义，dictionary 参数由 
 # fetch.py 下的 getDictionaryData() 函数生成
 def generateSourceDictionary(name, dictionary, nodescription=0):
-    f = open("temp/"+name+"_mdict.txt", "w")
+    f = open("temp/"+name+"_mdict.txt", "w", encoding="utf-8")
     if nodescription:
         for enname in dictionary.keys():
             f.write(enname+"\n"+dictionary[enname]["name"]+"\n</>\n")
     else:
         for enname in dictionary.keys():
             if dictionary[enname]["links"]=="":
-                f.write(enname+"\n"+dictionary[enname]["name"]+"\n"+dictionary[enname]["intro"]+"\n</>\n")
+                f.write(enname+"\n"+"<b>"+dictionary[enname]["name"]+"</b>"+"\n"+dictionary[enname]["intro"]+"\n</>\n")
             else:
-                f.write(enname+"\n"+dictionary[enname]["name"]+"\n"+dictionary[enname]["intro"]+"\n"+dictionary[enname]["links"]+"\n</>\n")
+                f.write(enname+"\n"+"<b>"+dictionary[enname]["name"]+"</b>"+"\n"+dictionary[enname]["intro"]+"\n"+dictionary[enname]["links"]+"\n</>\n")
     f.close()
 
 # 此函数调用 mdict_utils 库并根据指定的 txt 文件路径写入词典。title、

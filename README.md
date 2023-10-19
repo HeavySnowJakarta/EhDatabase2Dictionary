@@ -10,6 +10,10 @@ This project is only in Chinese and i18n would be a super long shot.
 
 + 日期（由新到旧排序） 消息内容
 
++ 10-19 测试工作舒服地很。Python 真舒服呐！接下来准备 v1.0 版本的发布。目前由于上游数据发布问题，链接的嵌入存在问题，无法以超链接格式嵌入。
+
++ 10-19 需要 tqdm 库。在此记录。
+
 + 10-19 在先前的工作上完成了基于 mdict-utils 库的 mdx 词典生成工作。开始测试。
 
 + 10-17 理清了子模块的提交问题，同时因为我之前把 `.gitsubmodules` 改坏了，`git commit` 不能正常工作，同时我对 `mdict.py` 的改动全部丢失。
@@ -105,7 +109,7 @@ DIFFERENT:  unusual pupils
 
 ## TODO
 - [x] mdict_mdx mdd
-<del>- [ ] lingoes_ld2 ldx</del>
+- [ ] <del>lingoes_ld2 ldx</del>
 - [ ] babylon_bgl
 - [ ] stardict_dict dict.dz idx idx.gz ifo
 - [ ] abbyy lingvo_dsl->lsd lud
