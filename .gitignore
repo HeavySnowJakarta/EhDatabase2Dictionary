@@ -19,6 +19,7 @@ test.json
 # output
 output/*
 !output/README.txt
+!output/LICENSE.md
 
 # temp files
 temp/*

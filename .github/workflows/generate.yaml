@@ -10,11 +10,31 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      # 配置 Python 环境
+      # 配置 Python 环境，安装 python 库
       - uses: actions/checkout@v4.0.0
       - name: setup-python
         uses: actions/setup-python@v4.7.0
         with:
           python-version: '3.11'
+      - name: install-pip-packages
+        uses: BSFishy/pip-action@v1
+        with:
+          packages: |
+            requests
+            tqdm
+      # 运行 Python 代码
       - name: run-python-codes
-        run: python ./main.py
+        shell: bash
+        run: python3 ./main.py
+      # 获取日期并发布 GitHub Release
+      - name: get-date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')"
+      - name: create-release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          automatic_release_tag: $${{steps.date.outputs.date}}
+          files: |
+            output/*
