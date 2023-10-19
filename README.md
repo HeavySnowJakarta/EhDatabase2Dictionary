@@ -15,7 +15,7 @@ This project is only in Chinese and i18n would be a super long shot.
 
 ## 如何使用本仓库
 
-### 直接下载现成的词典（正在开发）
+### 直接下载现成的词典（正在完善）
 
 本仓库应用 GitHub Action 技术每天发布 GitHub Release，您可直接前往 GitHub Releases 页面下载所需格式的词典。本项目词典的命名采用 `EhTagTranslation_词典格式` 的格式，例如要下载 MDict 格式的文件，只需下载 `EhTagTranslation_MDict.mdx` 即可。
 
@@ -32,6 +32,7 @@ pip3 install requests tqdm
 ```
 git clone https://github.com/HeavySnowJakarta/EhDatabase2Dictionary.git
 cd EhDatabase2Dictionary
+git submodule update --init --recursive
 python3 main.py
 ```
 
