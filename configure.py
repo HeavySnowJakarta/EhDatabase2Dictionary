@@ -14,6 +14,7 @@ title = "EhTagTranslation"
 description = "EhTagTranslation 项目的翻译数据。"
 
 # dictionary 变量指定输出的词典类型，all 代表输出全部词典
+# 这一功能尚在开发
 dictionary = "all"
 
 # nodescription 变量指定是否使输出的词典不包含词条描述，若指定为 True，则最终词典只包含英文词条的中文翻译
