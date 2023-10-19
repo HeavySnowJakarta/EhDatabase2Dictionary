@@ -6,7 +6,7 @@ from lib.mdict_utils.mdict_utils import writer
 # from lib.writemdict.writemdict import MDictWriter
 
 # generateSourceDictionary() 函数生成制作 MDict 词典所需的 txt 格式的文本
-# 文件，该文件将保存为 `output/<configure.py 定义的 name>_mdict.txt`。
+# 文件，该文件将保存为 `output/<configure.py定义的name>_mdict.txt`。
 # name 和 nodescription 参数当由 configure.py 定义，dictionary 参数由 
 # fetch.py 下的 getDictionaryData() 函数生成
 def generateSourceDictionary(name, dictionary, nodescription=0):
@@ -25,7 +25,6 @@ def generateSourceDictionary(name, dictionary, nodescription=0):
 # 此函数调用 mdict_utils 库并根据指定的 txt 文件路径写入词典。title、
 # description、nodescription 参数当由 confugure.py 定义，dictionary 参
 # 数由 fetch.py 下的 getDictionaryData() 函数生成
-# TODO: 继续完成对 mdict_utils 库下两个函数的调用
 def writeMdxFile(title, dictionary, description="", nodescription=0):
     # 首先生成 pack_mdx_txt() 函数所需要的 txt 中间文件
     generateSourceDictionary(name=title, dictionary=dictionary, nodescription=nodescription)

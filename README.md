@@ -11,6 +11,8 @@ This project is only in Chinese and i18n would be a super long shot.
 
 要获知当前分支的最新消息，参见 [CHANGELOG.md](doc/CHANGELOG.md)。要获取目前尚不稳定的开发中代码，请尝试切换至 dev 分支。要获知本项目计划支持的词典格式，参见 [TODO.md](doc/TODO.md)。
 
+开发指南？[main.py](main.py) 这个文件本身恰巧就是一部开发指南的序言！
+
 ## 如何使用本仓库
 
 ### 直接下载现成的词典（正在开发）

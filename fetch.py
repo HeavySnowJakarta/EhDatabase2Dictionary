@@ -7,7 +7,12 @@ import requests
 # 图词典的功能，后因此功能可能作用不大而放弃。与之相关的已经设计好的部分将会保
 # 留以供有需要时复用。
 
+# fetch.py 由两个函数构成，其中 getDictionaryData() 为其主要部分。
+
 # 此函数利用 Rest API 基于所提供的仓库获取数据源实际地址
+# https://api.github.com/repos/repository/releases/latest 本身是一个 json
+# 文件，在这个文件中“藏”着数据源的实际地址。这个函数的作用正是从这一地址获取数据库的
+# 实际下载地址。
 def getDataUrl(repository, noimage):
     url = "https://api.github.com/repos/" + repository + "/releases/latest"
     stringresult = requests.get(url).text
