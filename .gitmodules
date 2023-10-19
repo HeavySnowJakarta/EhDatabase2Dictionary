@@ -1,0 +1,3 @@
+[submodule "lib/mdict_utils"]
+	path = lib/mdict_utils
+	url = https://github.com/liuyug/mdict-utils.git
