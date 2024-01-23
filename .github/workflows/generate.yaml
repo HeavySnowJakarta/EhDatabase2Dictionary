@@ -40,6 +40,6 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           automatic_release_tag: latest
-          title: "每日构建"
+          title: "最新构建"
           files: |
             output/*
