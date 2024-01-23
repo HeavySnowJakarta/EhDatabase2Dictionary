@@ -1,10 +1,10 @@
 # 此 Github Action 自动运行 Python 脚本、生成词典并发布 release。
 name: generate-dictionaries
 
-# 触发条件：每天 UTC 时间 0 时，即北京时间 8 时
+# 触发条件：每月 1 日、15 日 UTC 时间 0 时，即北京时间 8 时
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 1,15 * *'
 
 # 测试用触发条件
 #on:
@@ -34,9 +34,6 @@ jobs:
         shell: bash
         run: python3 ./main.py
       # 获取日期并发布 GitHub Release
-      #- name: get-date
-      #  id: date
-      #  run: echo "date=$(date +'%Y-%m-%d')"
       - name: create-release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
